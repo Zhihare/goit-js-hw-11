@@ -1,6 +1,8 @@
 import Notiflix from 'notiflix';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+
+import axios from 'axios';
+
+
 
 
 export const refs = {
@@ -8,12 +10,9 @@ export const refs = {
 	input: document.getElementById('search-input'),
 }
 
-refs.form.addEventListener("submit", searhPhoto);
+refs.form.addEventListener("submit", searchPhoto);
 
-function searhPhoto() {
-	let a = []
-	a.push(refs.input.value);
-	console.log(a);
+async function searchPhoto() {
+	return console.log("sdsf");
 }
-console.dir(refs.form);
-console.log(refs.input.value);
+
