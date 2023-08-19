@@ -1,8 +1,9 @@
 import Notiflix from 'notiflix';
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { fetchPix } from './searchPhotoFunc';
 import { createMarkup } from './markup';
+
 
 
 
@@ -11,6 +12,7 @@ const refs = {
 	input: document.getElementById('search-input'),
 	gallery: document.querySelector('.gallery'),
 }
+
 
 refs.form.addEventListener("submit", searhPhoto);
 async function searhPhoto(event) {
@@ -22,4 +24,7 @@ async function searhPhoto(event) {
 	refs.gallery.insertAdjacentHTML('beforeend', createMarkup(hits));
 }
 
-// fetchPix("cat").then(console.log);
+const lightbox = new SimpleLightbox('.gallery a', {
+	captionsData: 'alt',
+	captionDelay: 250,
+});
