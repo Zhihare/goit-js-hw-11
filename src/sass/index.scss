@@ -64,7 +64,7 @@ input::placeholder {
 	color: rgb(248, 248, 250);
 }
 
-button {
+.button-search {
 	color: white;
 	float: right;
 	width: 40px;
@@ -114,7 +114,7 @@ button {
 	transform: scale(1.03);
 }
 
-img:hover {}
+
 
 img {
 	height: 100%;
@@ -158,4 +158,27 @@ img {
 	justify-content: center;
 	align-items: center;
 	color: #bc8448;
+}
+
+.load-more {
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	border-radius: 25%;
+	background: #bc8448;
+	color: #fafafa;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.load-more:hover {
+	background: white;
+	color: #2f3640;
+}
+
+.load-more-hidden {
+	display: none;
 }
