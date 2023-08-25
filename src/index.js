@@ -62,14 +62,14 @@ async function searhPhoto(event) {
 };
 
 
-
 const lightbox = new SimpleLightbox('.gallery a', {
 	captionsData: 'alt',
 	captionDelay: 250,
 });
 
 function clearPage() {
-	refs.gallery.innerHTML = '';
+	refs.gallery.innerHTML = ''
+	page = 1;
 }
 
 refs.load.addEventListener("click", handlerPagination);
