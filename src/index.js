@@ -30,7 +30,7 @@ async function searhPhoto(event) {
 	clearPage();
 
 	const Photo = refs.input.value.trim().toLowerCase();
-	console.log(fetchPix(Photo));
+	// console.log(fetchPix(Photo));
 	if (!Photo) {
 		clearPage();
 		Notiflix.Notify.info('Enter data to search!');
@@ -40,7 +40,6 @@ async function searhPhoto(event) {
 		const { hits, total } = await fetchPix(Photo);
 		// console.log(hits);
 		// console.log(total);
-
 
 		if (hits.length === 0) {
 			Notiflix.Notify.failure(
